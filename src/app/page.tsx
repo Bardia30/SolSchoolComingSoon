@@ -6,7 +6,7 @@ export default function Home() {
       {/* Logo Section */}
       <div className="mb-28">
         <Image
-          src="/logo.jpg"
+          src="/Logo.jpg"
           alt="Sol School of Music Logo"
           width={600}
           height={600}
