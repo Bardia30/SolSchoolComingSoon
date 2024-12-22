@@ -3,19 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #E4EAFF; /* Remove quotes */
+  --foreground: #050A30; /* Update text color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #E4EAFF; /* Remove quotes */
+    --foreground: #050A30;
   }
 }
 
+
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-hanken-grotesk), sans-serif; /* Use Hanken Grotesk globally */
+}
+
+h1 {
+  font-size: unset; /* Reset font size inheritance */
+  font-size:64px;
+}
+
+/* Default Footer Layout for Larger Screens */
+footer {
+  display: flex;
+  flex-direction: row; /* Horizontal layout by default */
+  gap: 2rem; /* Gap between items */
+  margin-bottom: 3rem; /* Consistent bottom margin */
+  font-size: 24px; /* Font size for footer */
+}
+
+/* Footer Layout for Screens Smaller Than 900px */
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    text-align: center; /* Center text alignment */
+    gap: 1rem; /* Smaller gap between stacked items */
+  }
+  h1 {
+    font-size: 32px;
+  }
 }

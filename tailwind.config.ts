@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        hanken: ["var(--font-hanken-grotesk)", "sans-serif"], // Add Hanken Grotesk
+      },
+      
     },
   },
   plugins: [],
