@@ -1,8 +1,14 @@
 import Image from "next/image";
+import Head from "next/head";
+
 
 export default function Home() {
   return (
-   <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground font-hanken">
+   <>
+   <Head>
+        <title>Sol School of Music</title>
+      </Head>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground font-hanken">
       {/* Logo Section */}
       <div className="mb-28">
         <Image
@@ -35,5 +41,7 @@ export default function Home() {
         </p>
       </footer>
     </div>
+   </>
+   
   );
 }
